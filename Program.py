@@ -2,6 +2,7 @@ titles = []
 authors = []
 genres = []
 
+#A function to add books accepting title, author and genre as parameters
 def add_book(title,author,genre):
     global titles
     global authors
@@ -10,6 +11,7 @@ def add_book(title,author,genre):
     authors.append(author)
     genres.append(genre)
 
+#A function to search a specific book based on it's genre, this functions returns a list
 def search_book_by_genre():
     global titles
     searched_books = []
@@ -19,6 +21,7 @@ def search_book_by_genre():
             searched_books.append(titles[i])
     return searched_books
 
+#A function to remove a book by taking a keyword and removing items having that keyword from the lists along with from authors and genres list 
 def remove_book(title_keyword):
     global titles, authors, genres
 
@@ -36,7 +39,7 @@ def remove_book(title_keyword):
     authors = new_authors
     genres = new_genres
 
-
+# main entry point of the program
 print("Welcome to Books Management System")
 choice = 0
 while choice != 4:
